@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+    <!-- Add TailwindCSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Add FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <nav class="max-w-8xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo or Brand Name -->
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0">
+                        <!-- Logo or brand name here -->
+                    </a>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="group relative">
+                        <a href="index.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Home</a>
+                        <button class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Electronics</button>
+                        <div class="hidden group-hover:block absolute left-0 w-screen bg-white border-t border-gray-200 shadow-lg" style="margin-left: calc(-50vw + 50%);">
+                            <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Mobile</h3>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Laptop</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Gym Devices</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Kitchen Devices</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="chapters.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Chapters</a>
+                    <a href="About.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">About Us</a>
+                    <a href="dry food.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Food</a>
+                    <a href="Sign_up.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Sign_up</a>
+                    
+                   
+                </div>
+    
+                <!-- Cart and Login Buttons -->
+                <div class="flex items-center space-x-4">
+                  
+                    <button class="text-custom hover:text-gray-600">
+                        <a href="log in.html">
+                            <i class="far fa-user text-xl"></i>
+                        </a>
+                    </button>
+                    
+                </div>
+
+            
+
+                <a href="./chart.html">
+                    <button class="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm">
+                      see more
+                    </button>
+                  </a>
+                  
+
+                
+     
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="menu-toggle" class="text-custom hover:text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12">
+            <!-- Loop over products (30 products) -->
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/Pro Treadmill X1.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Pro Treadmill X1</h2>
+                <p class="text-sm text-gray-600 mb-2">Commercial Grade Treadmill</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $2,499</div>
+               
+               
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+
+
+
+            <!-- Repeat the above div for 30 products -->
+            <!-- Use a JavaScript loop to generate this section dynamically for 30 products -->
+        <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/Commercial Power Rack.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Commercial Power Rack</h2>
+                <p class="text-sm text-gray-600 mb-2">Power Rack Elite</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $1,899</div>
+             
+              
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/Adjustable Dumbbells.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Adjustable Dumbbells</h2>
+                <p class="text-sm text-gray-600 mb-2">Adjustable Dumbbells.</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $799</div>
+     
+              
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/Pro Spin Bike.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Pro Spin Bike</h2>
+                <p class="text-sm text-gray-600 mb-2">Commercial Spin Bike</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $1,299</div>
+               
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/smartwatch.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">smartwatch</h2>
+                <p class="text-sm text-gray-600 mb-2">Find best watch decor deals</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $18.5</div>
+              
+               
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/tablet.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">iphone</h2>
+                <p class="text-sm text-gray-600 mb-2">iphone pro max</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $900</div>
+            
+               
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/some gas.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">soma gas</h2>
+                <p class="text-sm text-gray-600 mb-2">iibso hda </p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $500</div>
+             
+              
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/office-mod.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Office Supplies</h2>
+                <p class="text-sm text-gray-600 mb-2">Shop for office furniture and accessories.</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $1500</div>
+
+             
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/kitchen.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">Transform Your Kitchen</h2>
+                <p class="text-sm text-gray-600 mb-2">Discover premium kitchenware and appliances for the modern home chef..</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $150</div>
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/agabkii cuntada.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">cuntoyin diyarsan </h2>
+                <p class="text-sm text-gray-600 mb-2"></p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $12</div>
+
+                <!-- Product Features -->
+             
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/macmacaan.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">cake</h2>
+                <p class="text-sm text-gray-600 mb-2">.strowbery cheesecake</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $3.5</div>
+
+              
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/mango cake.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">mango cake</h2>
+                <p class="text-sm text-gray-600 mb-2">mango cake</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $4</div>
+
+            
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/orange cake.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">orange cake</h2>
+                <p class="text-sm text-gray-600 mb-2">orange cake</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $3</div>
+
+                
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/choocolate cake.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">choocolate cake</h2>
+                <p class="text-sm text-gray-600 mb-2">choocolate cake.</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $4.5</div>
+
+             
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <div class="flex justify-center">
+                    <img src="img/qudar laqalajiye.jpg" alt="Product Image" class="rounded-lg shadow-lg">
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 mb-2">fruits</h2>
+                <p class="text-sm text-gray-600 mb-2">dry fruits.</p>
+                <div class="text-lg font-semibold text-gray-800 mb-2">Price: $2</div>
+
+              
+
+                <!-- Product Actions (Sign Up to Buy) -->
+                <button class="w-full py-3 px-6 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="openModal()">Buy Now</button>
+            </div>
+
+        </div>
+    </main>
+
+ 
+
+    <!-- Sign Up Modal -->
+    <div id="signUpModal" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Sign Up</h3>
+            <form id="signUpForm">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded-md">
+                </div>
+                <button type="submit" class="w-full py-2 px-6 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600">Sign Up</button>
+            </form>
+            <button id="closeModalBtn" class="mt-4 w-full py-2 px-6 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600">Close</button>
+        </div>
+    </div>
+
+
+    <footer class="bg-white border-t">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">About Us</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Company</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Press</a></li>
+                    </ul>
+                </div>
+                <div>                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Support</h3>
+                    <ul class="space-y-3">                        <li><a href="#" class="text-gray-600 hover:text-custom">Help Center</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Terms of Service</a></li>                        <li><a href="#" class="text-gray-600 hover:text-custom">Cookie Policy</a></li>
+                    </ul>                </div>
+                <div>
+                    
+                   
+                        </button>
+                    </div>
+                </div>
+            
+        </div>
+    </footer> 
+
+
+  
+    <script src="./js/main1.js">
+
+    
+    </script>
+
+</body>
+
+</html>

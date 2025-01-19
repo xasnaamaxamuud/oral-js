@@ -1,0 +1,321 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* chapters css*/
+#chapter1 {
+    text-align: center;
+    padding: 50px;
+    background-color: #e09696;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+/* General styles for all chapter sections */
+[id^="chapter"] {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+[id^="chapter"] h1 {
+    font-size: 2rem;
+    color: #291d6e;
+    margin-bottom: 20px;
+}
+
+/* Button styles for all chapters */
+[id^="chapter"] button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+[id^="chapter"] button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+[id^="chapter"] button:focus {
+    outline: none;
+}
+
+[id^="chapter"] button:active {
+    background-color: #003f6b;
+    transform: scale(1.02);
+}
+
+/* Hide chapters initially */
+.hidden {
+    display: none;
+}
+
+
+/* Styling the parent list */
+#parentList {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 20px auto;
+    width: 50%; /* Adjust the width of the list */
+    background-color: #f4f4f4; /* Light background color */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling individual list items */
+#parentList li {
+    padding: 12px 20px; /* Padding for list items */
+    margin: 5px 0; /* Spacing between list items */
+    background: linear-gradient(to right, #ff80ab, #6a1b9a); /* Blue background for each item */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size for list items */
+    border-radius: 6px; /* Rounded corners for each item */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Cursor pointer for better UX */
+}
+
+/* Hover effect for list items */
+#parentList li:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Focus state for list items */
+#parentList li:focus {
+    outline: none;
+    background-color: #003f6b; /* Dark blue when focused */
+}
+
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* ch8*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* Spinner style */
+  .spinner-border {
+    margin: 10px;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  /* Form styles */
+  .form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-container input, .form-container select, .form-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .form-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Alert box styles */
+  .alert {
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .alert-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .alert-info {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .alert-warning {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .alert-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  
+  /* Form Container */
+  .form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  
+  /* Form Heading */
+  .form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .form-container input, 
+  .form-container select, 
+  .form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Focus on Input Fields */
+  .form-container input:focus, 
+  .form-container select:focus, 
+  .form-container textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Submit Button */
+  .form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Label Styling */
+  .form-container label {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Spacing between form elements */
+  .form-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Error message styling */
+  .form-container .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Success message styling */
+  .form-container .success {
+    color: green;
+    font-size: 14px;
+  }
+ /* ch8*/
+
+
+ /* Style the button */
+
+  #hero {
+    position: relative;
+    height: 60vh;
+    background-image: url('../img/miis.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(29, 20, 20);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}

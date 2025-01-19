@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Gym-device</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<style>
+
+</style>
+<body class="font-['Inter'] bg-gray-50">
+<!-- Cart Button in Navbar -->
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <nav class="max-w-8xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo or Brand Name -->
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0">
+                    <!-- Logo or brand name here -->
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <div class="group relative">
+                    <a href="index.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Home</a>
+                    <button class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Electronics</button>
+                    <div class="hidden group-hover:block absolute left-0 w-screen bg-white border-t border-gray-200 shadow-lg" style="margin-left: calc(-50vw + 50%);">
+                        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Mobile</h3>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Laptop</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Gym Devices</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Kitchen Devices</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="chapters.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Chapters</a>
+                <a href="About.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">About Us</a>
+                <a href="dry food.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Food</a>
+                <a href="Sign_up.html" class="text-gray-600 hover:text-custom">Sign_up</a>
+               
+            </div>
+
+            <!-- Cart and Login Buttons -->
+            <div class="flex items-center space-x-4">
+                <button type="button" id="cart-button" class="!rounded-button relative inline-flex items-center px-4 text-sm font-medium text-black">
+                    <i class="fas fa-shopping-cart mr-2"></i>
+                    Cart (<span id="cart-count">0</span>)
+                </button>
+                <button class="text-custom hover:text-gray-600">
+                    <a href="log in.html">
+                        <i class="far fa-user text-xl"></i>
+                    </a>
+                </button>
+                
+            </div>
+ 
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="lg:hidden flex items-center space-x-4">
+                <button id="menu-toggle" class="text-custom hover:text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+ <!-- Mobile Menu -->
+ <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+    <div class="flex flex-col space-y-4 p-4">
+        <a href="index.html" class="text-gray-600 hover:text-custom">Home</a>
+        <a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a>
+        <a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a>
+        <a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a>
+        <a href="chapters.html" class="text-gray-600 hover:text-custom">Chapters</a>
+        <a href="About.html" class="text-gray-600 hover:text-custom">About Us</a>
+        <a href="dry food.html" class="text-gray-600 hover:text-custom">Food</a>
+       
+      
+    </div>
+</div>
+
+
+<main>    
+        <section class="relative bg-gray-900 h-[600px] overflow-hidden">
+    <img src="https://creatie.ai/ai/api/search-image?query=A professional modern gym interior with high-end equipment, featuring treadmills and weight machines, with dramatic lighting and a luxurious atmosphere, shot with a wide-angle lens&width=1920&height=1080&orientation=landscape&flag=916c8106-c05b-49f9-a311-ba6087e03216" class="absolute inset-0 w-full h-full object-cover opacity-50">            <div class="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div class="max-w-2xl">                    <h1 class="text-5xl font-bold text-white mb-6">Premium Gym Equipment for Your Fitness Journey</h1>
+            <p class="text-xl text-gray-200 mb-8">Discover top-quality fitness equipment from leading brands. Transform your space into the ultimate workout sanctuary.</p>
+
+        </div>
+    </div>
+</section>
+
+<section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16">            <div class="grid grid-cols-4 gap-8">
+        <div class="text-center">
+            <div class="bg-custom/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">                        <i class="fas fa-running text-3xl text-custom"></i>
+            </div>
+            <h3 class="font-semibold mb-2">Cardio Equipment</h3>
+            <p class="text-gray-600">Treadmills, Bikes, Ellipticals</p>
+        </div>
+        <div class="text-center">                    <div class="bg-custom/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-dumbbell text-3xl text-custom"></i>
+            </div>
+            <h3 class="font-semibold mb-2">Strength Training</h3>
+            <p class="text-gray-600">Weight Machines, Racks</p>
+        </div>
+        <div class="text-center">
+            <div class="bg-custom/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">                        <i class="fas fa-weight-hanging text-3xl text-custom"></i>
+            </div>
+            <h3 class="font-semibold mb-2">Free Weights</h3>
+            <p class="text-gray-600">Dumbbells, Barbells, Plates</p>
+        </div>
+        <div class="text-center">                    <div class="bg-custom/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-home text-3xl text-custom"></i>
+            </div>
+            <h3 class="font-semibold mb-2">Home Gym</h3>
+            <p class="text-gray-600">Complete Home Solutions</p>
+        </div>
+    </div>
+</section>
+
+
+        
+<section class="py-16 bg-gray-50">
+    <div class="grid grid-cols-4 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/Pro Treadmill X1.jpg" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-semibold">Pro Treadmill X1</h3>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span class="ml-1">4.8</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Commercial Grade Treadmill</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">$2,499</span>
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 hover:bg-custom/90 add-to-cart"
+                        data-id="treadmill" data-name="Pro Treadmill X1" data-description="Commercial Grade Treadmill"
+                        data-price="$2499" data-image="img/Pro Treadmill X1.jpg">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/Commercial Power Rack.jpg" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-semibold">Power Rack Elite</h3>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span class="ml-1">4.9</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Commercial Power Rack</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">$1,899</span>
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 hover:bg-custom/90 add-to-cart"
+                        data-id="power-rack" data-name="Power Rack Elite" data-description="Commercial Power Rack"
+                        data-price="$1899" data-image="img/Commercial Power Rack.jpg">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/Adjustable Dumbbells.jpg" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-semibold">Adjustable Dumbbells</h3>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span class="ml-1">4.7</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">5-50 lbs Each</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">$799</span>
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 hover:bg-custom/90 add-to-cart"
+                        data-id="dumbbells" data-name="Adjustable Dumbbells" data-description="5-50 lbs Each"
+                        data-price="$799" data-image="img/Adjustable Dumbbells.jpg">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/Pro Spin Bike.jpg" class="w-full h-64 object-cover">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-semibold">Pro Spin Bike</h3>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span class="ml-1">4.6</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 mb-4">Commercial Spin Bike</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold">$1,299</span>
+                    <button class="!rounded-button bg-custom text-white px-4 py-2 hover:bg-custom/90 add-to-cart"
+                        data-id="spin-bike" data-name="Pro Spin Bike" data-description="Commercial Spin Bike"
+                        data-price="$1299" data-image="img/Pro Spin Bike.jpg">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<!-- Cart Modal -->
+<div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div class="bg-white rounded-lg p-8 w-96">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </ul>
+        <button id="close-modal" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
+    </div>
+</div>
+
+
+
+<footer class="bg-white border-t">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">About Us</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Company</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Careers</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Press</a></li>
+                </ul>
+            </div>
+            <div>                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Support</h3>
+                <ul class="space-y-3">                        <li><a href="#" class="text-gray-600 hover:text-custom">Help Center</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Terms of Service</a></li>                        <li><a href="#" class="text-gray-600 hover:text-custom">Cookie Policy</a></li>
+                </ul>                </div>
+            <div>
+
+                    </button>
+                </div>
+            </div>
+        </div>            <div class="border-t mt-12 pt-8">
+            <div class="flex items-center justify-between">
+                <p class="text-gray-500">&copy; 2024 Tech Store. All rights reserved.</p>
+               
+            </div>            </div>
+    </div>
+</footer>
+<script src="js/main1.js">
+
+
+
+
+ </script>
+
+</body>
+</html>

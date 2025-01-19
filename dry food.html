@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Price Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius='small'></script>
+</head>
+<style>
+ #hero {
+    position: relative;
+    height: 60vh;
+    background-image: url('img/paasto\ .jpg'); /* Replace this with your image URL */
+    background-size: cover;
+    background-position: center;
+    color: rgb(29, 20, 20);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+</style>
+
+<body class="bg-gray-50 font-sans">
+  
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <nav class="max-w-8xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo or Brand Name -->
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0">
+                        <!-- Logo or brand name here -->
+                    </a>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="group relative">
+                        <a href="index.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Home</a>
+                        <button class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Electronics</button>
+                        <div class="hidden group-hover:block absolute left-0 w-screen bg-white border-t border-gray-200 shadow-lg" style="margin-left: calc(-50vw + 50%);">
+                            <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Mobile</h3>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Laptop</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Gym Devices</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Kitchen Devices</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="chapters.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Chapters</a>
+                    <a href="About.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">About Us</a>
+                    <a href="dry food.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Food</a>
+                    <a href="Sign_up.html" class="text-gray-600 hover:text-custom">Sign_up</a>
+                   
+                </div>
+    
+                <!-- Cart and Login Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button type="button" id="cart-button" class="!rounded-button relative inline-flex items-center px-4 text-sm font-medium text-black">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                    <button class="text-custom hover:text-gray-600">
+                        <a href="log in.html">
+                            <i class="far fa-user text-xl"></i>
+                        </a>
+                    </button>
+                    
+                </div>
+     
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="menu-toggle" class="text-custom hover:text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+     <!-- Mobile Menu -->
+     <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="flex flex-col space-y-4 p-4">
+            <a href="index.html" class="text-gray-600 hover:text-custom">Home</a>
+            <a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a>
+            <a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a>
+            <a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a>
+            <a href="chapters.html" class="text-gray-600 hover:text-custom">Chapters</a>
+            <a href="About.html" class="text-gray-600 hover:text-custom">About Us</a>
+           
+        </div>
+    </div>
+
+    <main>
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+           
+    
+  <!-- Featured Product Services Section -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-6">food</h2>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/agabkii cuntada.jpg" class="w-full h-48 object-cover" alt="food">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">cuntoyin diyarsan </h3>
+                <p class="mt-2 text-sm text-gray-500">height quality</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="foo" data-name="food" data-description="miro shidan oo diyarsan" data-image="img/agabkii cuntada.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Fashion -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/qudar laqalajiye.jpg" class="w-full h-48 object-cover" alt="Fashion">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">nuucwalba oo qudar ah</h3>
+                <p class="mt-2 text-sm text-gray-500">dry fruits</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="food" data-name="food" data-description="dry fruits" data-image="img/qudar laqalajiye.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Home & Living -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/paasto .jpg" class="w-full h-48 object-cover" alt="Home & Living">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900"> pasta</h3>
+                <p class="mt-2 text-sm text-gray-500">Find best watch decor deals</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="food" data-name="pasto nuucwalba" data-description="Find best italian  pasta" data-image="img/paasto .jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Beauty & Health -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/home  made.jpg" class="w-full h-48 object-cover" alt="Beauty & Health">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">home made</h3>
+                <p class="mt-2 text-sm text-gray-500">home made fruits</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="food" data-name="food" data-description="home made fruits" data-image="img/home  made.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Product Services Section -->
+<section class="mb-12">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-6">cuntooyin fudud</h2>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Gadgets -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/macmacaan.jpg" class="w-full h-48 object-cover" alt="Gadgets">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">cake</h3>
+                <p class="mt-2 text-sm text-gray-500">strowbery cheesecake </p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="food" data-name="food" data-description="strowbery cheesecake" data-image="img/macmacaan.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Shoes -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/mango cake.jpg" class="w-full h-48 object-cover" alt="food">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">mango cake</h3>
+                <p class="mt-2 text-sm text-gray-500">mango cake</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="food" data-name="food" data-description="mango cake" data-image="img/mango cake.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Kitchen Appliances -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/orange cake.jpg" class="w-full h-48 object-cover" alt="Kitchen Appliances">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">orange cake</h3>
+                <p class="mt-2 text-sm text-gray-500">orange cake</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="sweats" data-name="orange cake" data-description="orange cake" data-image="img/orange cake.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+       
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/choocolate cake.jpg" class="w-full h-48 object-cover" alt="Office Supplies">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900"> choocolate cake</h3>
+                <p class="mt-2 text-sm text-gray-500">choocolate cake</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="choocolate cake" data-name="choocolate cakes" data-description="choocolate cake" data-image="img/choocolate cake.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+    
+        </div>
+    </main>
+<!-- Cart Modal -->
+
+<div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div class="bg-white rounded-lg p-8 w-96">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </ul>
+        <button id="close-modal" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
+    </div>
+</div>
+
+
+
+<footer class="bg-white border-t">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">About Us</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Company</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Careers</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Press</a></li>
+                </ul>
+            </div>
+            <div>                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Support</h3>
+                <ul class="space-y-3">                        <li><a href="#" class="text-gray-600 hover:text-custom">Help Center</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Contact Us</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Privacy Policy</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Terms of Service</a></li>                        <li><a href="#" class="text-gray-600 hover:text-custom">Cookie Policy</a></li>
+                </ul>                </div>
+            <div>
+                
+               
+                    </button>
+                </div>
+            </div>
+        
+    </div>
+</footer> 
+
+<script>
+     
+   
+
+
+</script>
+    
+<script src="js/main1.js">
+
+
+
+
+      
+    
+
+    
+</script>
+
+
+        
+
+
+
+
+    
+</body>
+</html>

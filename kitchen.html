@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Kitchen Market - Premium Kitchenware & Appliances</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+
+    <style>
+.hidden {
+    display: none;
+}
+#suggestion-modal {
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <nav class="max-w-8xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo or Brand Name -->
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0">
+                        <!-- Logo or brand name here -->
+                    </a>
+                </div>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <div class="group relative">
+                        <a href="index.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Home</a>
+                        <button class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Electronics</button>
+                        <div class="hidden group-hover:block absolute left-0 w-screen bg-white border-t border-gray-200 shadow-lg" style="margin-left: calc(-50vw + 50%);">
+                            <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Mobile</h3>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Laptop</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Gym Devices</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-custom mb-4">Kitchen Devices</h3>
+                                    <ul class="space-y-2">
+                                        <li><a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="chapters.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Chapters</a>
+                    <a href="About.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">About Us</a>
+                    <a href="dry food.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Food</a>
+                    <a href="Sign_up.html" class="text-gray-600 hover:text-custom">Sign_up</a>
+                   
+                </div>
+    
+                <!-- Cart and Login Buttons -->
+                <div class="flex items-center space-x-4">
+                    <button type="button" id="cart-button" class="!rounded-button relative inline-flex items-center px-4 text-sm font-medium text-black">
+                        <i class="fas fa-shopping-cart mr-2"></i>
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
+                    <button class="text-custom hover:text-gray-600">
+                        <a href="log in.html">
+                            <i class="far fa-user text-xl"></i>
+                        </a>
+                    </button>
+                    
+                </div>
+     
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button id="menu-toggle" class="text-custom hover:text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+     <!-- Mobile Menu -->
+     <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="flex flex-col space-y-4 p-4">
+            <a href="index.html" class="text-gray-600 hover:text-custom">Home</a>
+            <a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a>
+            <a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a>
+            <a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a>
+            <a href="chapters.html" class="text-gray-600 hover:text-custom">Chapters</a>
+            <a href="About.html" class="text-gray-600 hover:text-custom">About Us</a>
+            <a href="dry food.html" class="text-gray-600 hover:text-custom">Food</a>
+           
+        </div>
+    </div>
+
+    <main>
+        <section class="relative bg-gray-900 h-[500px] overflow-hidden">            <div class="absolute inset-0">
+                <img src="img/kitchen.jpg" alt="Kitchen Banner" class="w-full h-full object-cover opacity-50">            </div>
+            <div class="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+                <div class="max-w-2xl">                    <h1 class="text-5xl font-bold text-white mb-6">Transform Your Kitchen</h1>
+                    <p class="text-xl text-gray-200 mb-8">Discover premium kitchenware and appliances for the modern home chef.</p>
+            
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16">            <h2 class="text-3xl font-bold text-gray-900 mb-8">Popular Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">                <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+                    <img src="img/Tableware.jpg" alt="Cookware" class="w-full h-48 object-cover rounded-lg mb-4">                    <h3 class="text-lg font-medium text-gray-900">Cookware</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">                    <img src="img/applic.jpg" alt="Appliances" class="w-full h-48 object-cover rounded-lg mb-4">                    <h3 class="text-lg font-medium text-gray-900">Appliances</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">                    <img src="img/Utensils.jpg" alt="Utensils" class="w-full h-48 object-cover rounded-lg mb-4">                    <h3 class="text-lg font-medium text-gray-900">Utensils</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">                    <img src="img/complete kitchen.jpg" alt="Storage" class="w-full h-48 object-cover rounded-lg mb-4">                    <h3 class="text-lg font-medium text-gray-900">Storage</h3>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">                    <img src="img/kitchen-tableware.jpg" alt="Tableware" class="w-full h-48 object-cover rounded-lg mb-4">                    <h3 class="text-lg font-medium text-gray-900">Tableware</h3>
+                </div>
+            </div>
+        </section>      
+        
+    
+<section class="mb-12">
+    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Additional Product Services</h2>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Gadgets -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/some gas.jpg" class="w-full h-48 object-cover" alt="som gas">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">soma gas</h3>
+                <p class="mt-2 text-sm text-gray-500">iibso hda </p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="kitchen-appliances" data-name="" data-description="Upgrade kitchen with smart appliances" data-image="img/some gas.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Shoes -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/siliga alabta.jpg" class="w-full h-48 object-cover" alt="Shoes">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">Kitchenware</h3>
+                <p class="mt-2 text-sm text-gray-500">Shop  now</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="kitchen-appliances" data-name="kitchen-appliances" data-description="Upgrade kitchen with smart appliances" data-image="img/siliga alabta.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Kitchen Appliances -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/saxaman.jpg" class="w-full h-48 object-cover" alt="Kitchen Appliances">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">Plates</h3>
+                <p class="mt-2 text-sm text-gray-500">Alaabaha Fudud ee Jikada</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="kitchen-appliances" data-name="Kitchen Appliances" data-description="Upgrade kitchen with smart appliances" data-image="img/saxaman.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Office Supplies -->
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="img/qadoyin jumlo ah.jpg" class="w-full h-48 object-cover" alt="Office Supplies">
+            <div class="p-6">
+                <h3 class="text-lg font-medium text-gray-900">Spoons </h3>
+                <p class="mt-2 text-sm text-gray-500">Alaabaha Fudud ee Jikada</p>
+                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart"
+                    data-id="kitchen-appliances" data-name="kitchen-appliances" data-description="Upgrade kitchen with smart appliances" data-image="img/qadoyin jumlo ah.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+    
+        </div>
+    </main>
+<!-- Cart Modal -->
+<div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div class="bg-white rounded-lg p-8 w-96">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </ul>
+        <button id="close-modal" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
+    </div>
+</div>
+
+
+        
+
+            <section class="bg-gray-50 py-16">
+            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Customer Reviews</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-sm p-6">                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Exceptional quality cookware that has completely transformed my cooking experience. Worth every penny!"</p>                        <div class="flex items-center">
+                           
+                        </div>                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex text-yellow-400 mb-4">                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                        <p class="text-gray-600 mb-4">"The stand mixer is a game-changer. Professional quality and beautiful design. Highly recommend!"</p>                        <div class="flex items-center">
+                          
+                        </div>                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex text-yellow-400 mb-4">                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>                        <p class="text-gray-600 mb-4">"The kitchen bundle was exactly what I needed for my new home. Great value and fantastic quality!"</p>                        <div class="flex items-center">
+                           
+                        </div>                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+<!-- Main Suggestion Modal -->
+<div id="suggestion-modal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+        <h2 id="modal-title" class="text-2xl font-bold"></h2>
+        <img id="modal-image" class="w-full h-64 object-cover mt-4" alt="Product Image">
+        <p id="modal-description" class="mt-4 text-gray-600"></p>
+        <ul id="suggestion-list" class="mt-4 space-y-2 text-gray-600"></ul>
+        <div class="mt-4 flex justify-between items-center">
+            <button onclick="closeModal()" class="px-4 py-2 bg-red-600 text-white rounded-full">Close</button>
+            <button id="buy-now-button" class="px-4 py-2 bg-green-600 text-white rounded-full">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+<!-- Related Products Modal -->
+<div id="related-products-modal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg max-w-lg w-full">
+        <h2 class="text-2xl font-bold mb-4">You may also like</h2>
+        <ul id="related-products-list" class="space-y-4">
+            <!-- Related products will be added here dynamically -->
+        </ul>
+        <button onclick="closeRelatedModal()" class="px-4 py-2 bg-red-600 text-white rounded-full mt-4">Close</button>
+    </div>
+</div>
+
+
+
+        
+
+    
+    
+    
+
+    <footer class="bg-white border-t">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">About Us</h3>
+                    <ul class="space-y-3">
+                        
+                        <li><a href="#" class="text-gray-600 hover:text-custom">About us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom"> about</a></li>
+                    </ul>
+                </div>
+                <div>                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Support</h3>
+                    <ul class="space-y-3">                        <li><a href="#" class="text-gray-600 hover:text-custom">Help page</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Contact Us</a></li>
+                       
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                    <li><a href="#" class="text-gray-600 hover:text-custom">Cookie Policy</a></li>
+
+                </ul>                
+            </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Newsletter</h3>                    
+                    <p class="text-gray-600 mb-4">Stay updated with our latest offers</p>
+                    
+                    <div class="flex">
+
+                        </button>
+                    </div>
+                </div>
+            </div>            <div class="border-t mt-12 pt-8">
+                <div class="flex items-center justify-between">
+                    <p class="text-gray-500">market price Tracker
+                       
+                         </p>
+                    
+                
+        </div>
+    </footer> 
+
+  
+
+
+   
+
+    <script src="./js/main1.js">
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+    </body>
+</html>

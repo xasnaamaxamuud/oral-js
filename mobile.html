@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Mobiles & Laptops</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+
+</head>
+<body class="bg-gray-50 font-inter">
+<!-- Cart Button in Navbar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+    <nav class="max-w-8xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo or Brand Name -->
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0">
+                    <!-- Logo or brand name here -->
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <div class="group relative">
+                    <a href="index.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Home</a>
+                    <button class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Electronics</button>
+                    <div class="hidden group-hover:block absolute left-0 w-screen bg-white border-t border-gray-200 shadow-lg" style="margin-left: calc(-50vw + 50%);">
+                        <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8 p-8">
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Mobile</h3>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Laptop</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Gym Devices</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-custom mb-4">Kitchen Devices</h3>
+                                <ul class="space-y-2">
+                                    <li><a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="chapters.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Chapters</a>
+                <a href="About.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">About Us</a>
+                <a href="dry food.html" class="text-custom hover:text-gray-600 px-3 py-2 font-medium">Food</a>
+              
+                <a href="Sign_up.html" class="text-gray-600 hover:text-custom">Sign_up</a>s
+            </div>
+
+            <!-- Cart and Login Buttons -->
+            <div class="flex items-center space-x-4">
+                <button type="button" id="cart-button" class="!rounded-button relative inline-flex items-center px-4 text-sm font-medium text-black">
+                    <i class="fas fa-shopping-cart mr-2"></i>
+                    Cart (<span id="cart-count">0</span>)
+                </button>
+                <button class="text-custom hover:text-gray-600">
+                    <a href="log in.html">
+                        <i class="far fa-user text-xl"></i>
+                    </a>
+                </button>
+                
+            </div>
+ 
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="lg:hidden flex items-center space-x-4">
+                <button id="menu-toggle" class="text-custom hover:text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+ <!-- Mobile Menu -->
+ <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+    <div class="flex flex-col space-y-4 p-4">
+        <a href="index.html" class="text-gray-600 hover:text-custom">Home</a>
+        <a href="mobile.html" class="text-gray-600 hover:text-custom">Mobile & Laptops</a>
+        <a href="gym.html" class="text-gray-600 hover:text-custom">Gym Devices</a>
+        <a href="kitchen.html" class="text-gray-600 hover:text-custom">Kitchen Devices</a>
+        <a href="chapters.html" class="text-gray-600 hover:text-custom">Chapters</a>
+        <a href="About.html" class="text-gray-600 hover:text-custom">About Us</a>
+        <a href="dry food.html" class="text-gray-600 hover:text-custom">Food</a>
+        <a href="Sign_up.html" class="text-gray-600 hover:text-custom">Food</a>
+    </div>
+</div>
+
+    <main>
+     
+        <div class="glide hero-slider relative h-[500px] overflow-hidden">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <!-- Slide 1 -->
+                    <li class="glide__slide relative">
+                        <img src="img/gedgets.jpg" class="w-full h-[500px] object-cover" alt="Tech Devices">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                            <div class="max-w-8xl mx-auto px-8">
+                                <h1 class="text-5xl font-bold text-white mb-4">New Generation Devices</h1>
+                                <p class="text-xl text-white mb-8">Discover the latest technology at unbeatable prices</p>
+                            </div>
+                        </div>
+                    </li>
+        
+                    <!-- Slide 2 -->
+                    <li class="glide__slide relative">
+                        <img src="img/laptop.jpg" class="w-full h-[500px] object-cover" alt="Latest Laptops">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                            <div class="max-w-8xl mx-auto px-8">
+                                <h1 class="text-5xl font-bold text-white mb-4">Latest Laptops</h1>
+                                <p class="text-xl text-white mb-8">Get performance and style with our premium laptops</p>
+                            </div>
+                        </div>
+                    </li>
+        
+                    <!-- Slide 3 -->
+                    <li class="glide__slide relative">
+                        <img src="img/smartwatch.jpg" class="w-full h-[500px] object-cover" alt="Smartphones">
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+                            <div class="max-w-8xl mx-auto px-8">
+                                <h1 class="text-5xl font-bold text-white mb-4">Smartwarch</h1>
+                                <p class="text-xl text-white mb-8">Explore the latest smartphones with cutting-edge features</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+            <!-- Navigation Dots -->
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+        </div>
+           
+        
+
+
+
+
+
+
+
+
+
+
+
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-2 gap-8 mb-12">
+                <a href="#" class="relative group overflow-hidden rounded-lg">                    <img src="img/smartphone.jpg" class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Mobile Phones">                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                        <div>                            <h3 class="text-2xl font-bold text-white mb-2">Mobile Phones</h3>
+                            <p class="text-white">Latest smartphones from top brands</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="relative group overflow-hidden rounded-lg">                    <img src="img/laptop.jpg" class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-300" alt="Laptops">                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                        <div>                            <h3 class="text-2xl font-bold text-white mb-2">Laptops</h3>
+                            <p class="text-white">Powerful notebooks for work and play</p>
+                        </div>
+                    </div>
+                </a>
+            </div>            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold">Featured Products</h2>                <div class="flex space-x-4">
+                    
+                    </select>
+                </div>            </div>
+
+                
+                <!-- first section -->
+                <section class="mb-12">
+                   
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        <!-- Electronics -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/gedgets.jpg" class="w-full h-48 object-cover" alt="Electronics">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">Electronics</h3>
+                                <p class="mt-2 text-sm text-gray-500">Track prices on latest gadgets</p>
+                              <!-- Update your product items to include more data attributes for product details -->
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="gedgets.jpg" data-description="Latest model with high-end features" data-image="img/gedgets.jpg">Add to Cart</button>
+
+                            </div>
+                        </div>
+                
+                        <!-- Fashion -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/laptop-bag..jpg" class="w-full h-48 object-cover" alt="Fashion">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">Fashion</h3>
+                                <p class="mt-2 text-sm text-gray-500">Compare fashion brand prices</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="laptop-bag" data-description="Latest model with high-end features" data-image="img/laptop-bag..jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                
+                        <!-- Home & Living -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/camirada mubeylka laguxiro.jpg" class="w-full h-48 object-cover" alt="Home & Living">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">camirada mubeylka</h3>
+                                <p class="mt-2 text-sm text-gray-500">Find best camira</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="camirada mubeylka laguxiro" data-description="Latest model with high-end features" data-image="img/camirada mubeylka laguxiro.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                
+                        <!-- Beauty & Health -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/elec.jpg" class="w-full h-48 object-cover" alt="Beauty & Health">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">Laptops</h3>
+                                <p class="mt-2 text-sm text-gray-500">Track desktop product prices</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="disktop" data-description="Latest model with high-end features" data-image="img/elec.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Additional Four Sections -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-6">Additional Product Services</h2>
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                        <!-- Gadgets -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/gedgets2.jpg" class="w-full h-48 object-cover" alt="Gadgets">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">Gadgets</h3>
+                                <p class="mt-2 text-sm text-gray-500">Track latest gadgets and tech accessories</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="gedgets" data-description="Latest model with high-end features" data-image="img/gedgets2.jpg">Add to Cart</button>
+                            </div>
+                        </div>
+                
+                        <!-- Shoes -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/laptop.jpg" class="w-full h-48 object-cover" alt="Shoes">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">laptop</h3>
+                                <p class="mt-2 text-sm text-gray-500">labtop</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="labtop" data-description="Latest model with high-end features" data-image="img/laptop.jpg">Add to Cart</button>  
+                            </div>
+                        </div>
+                
+                        <!-- Kitchen Appliances -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/tv.jpg" class="w-full h-48 object-cover" alt="Kitchen Appliances">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">tv</h3>
+                                <p class="mt-2 text-sm text-gray-500">Upgrade your home  with smart appliances</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="tv" data-description="Latest model with high-end features" data-image="img/tv.jpg">Add to Cart</button>  
+                            </div>
+                        </div>
+                
+                        <!-- Office Supplies -->
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                            <img src="img/bluetooth-speaker.jpg" class="w-full h-48 object-cover" alt="Office Supplies">
+                            <div class="p-6">
+                                <h3 class="text-lg font-medium text-gray-900">Office Supplies</h3>
+                                <p class="mt-2 text-sm text-gray-500">Shop for office furniture and accessories</p>
+                                <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="bluetooth-speaker" data-description="Latest model with high-end features" data-image="img/bluetooth-speaker.jpg">Add to Cart</button> 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+           
+        </div>
+<!--Special Offers-->
+<div class="bg-gray-900 py-16">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">                <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white mb-4">Special Offers</h2>                    <p class="text-gray-400">Limited time deals on premium devices</p>
+        </div>
+        <div class="grid grid-cols-3 gap-8">                    <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">                            <span class="text-sm font-medium text-custom">Save $200</span>
+                    <span class="text-sm font-medium text-gray-500">Ends in 2 days</span>
+                </div>
+                <img src="img/iPhone 14 Pro Max.jpg" alt="iPhone 14 Pro Max">                        <h3 class="text-lg font-semibold mb-2">iPhone 14 Pro Max</h3>
+                <p class="text-gray-600 text-sm mb-4">256GB Storage, All Colors Available</p>
+                <div class="flex items-center justify-between">
+                    <div>                                <span class="text-2xl font-bold">$1,099</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">$1,299</span>
+                    </div>
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="iPhone 14 Pro Max" data-description="Latest model with high-end features" data-image="img/iPhone 14 Pro Max.jpg">Add to Cart</button>                    
+                    </button>
+                </div>
+            </div>                    <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">                            <span class="text-sm font-medium text-custom">Save $300</span>
+                    <span class="text-sm font-medium text-gray-500">Ends in 5 days</span>
+                </div>
+                <img src="img/MacBook Air M2.jpg" class="w-full h-48 object-cover rounded-lg mb-4" alt="MacBook Air">                        <h3 class="text-lg font-semibold mb-2">MacBook Air M2</h3>
+                <p class="text-gray-600 text-sm mb-4">8-core CPU, 10-core GPU, 16GB RAM</p>
+                <div class="flex items-center justify-between">
+                    <div>                                <span class="text-2xl font-bold">$1,299</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">$1,599</span>
+                    </div>
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="MacBook Air M2" data-description="Latest model with high-end features" data-image="img/MacBook Air M2.jpg">Add to Cart</button>                    
+                    </button>
+                </div>
+            </div>                    <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">                            <span class="text-sm font-medium text-custom">Save $150</span>
+                    <span class="text-sm font-medium text-gray-500">Ends in 3 days</span>
+                </div>
+                <img src="img/glalaxy tab s9 ultara.jpg" class="w-full h-48 object-cover rounded-lg mb-4" alt="Samsung Tab S9">                        <h3 class="text-lg font-semibold mb-2">Samsung Tab S9 Ultra</h3>
+                <p class="text-gray-600 text-sm mb-4">14.6" Display, 256GB Storage</p>
+                <div class="flex items-center justify-between">
+                    <div>                                <span class="text-2xl font-bold">$949</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">$1,099</span>
+                    </div>
+                    <button class="!rounded-button mt-4 w-full bg-custom text-white px-4 py-2 text-sm font-medium hover:bg-custom/90 add-to-cart" data-id="electronics" data-name="glalaxy tab s9 ultara" data-description="Latest model with high-end features" data-image="img/glalaxy tab s9 ultara.jpg">Add to Cart</button>                    
+                    </button>
+                </div>
+            </div>                </div>
+    </div>
+</div>
+    </main>
+
+
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50 hidden">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-semibold mb-4">Your Cart</h2>
+        <ul id="cart-items" class="space-y-4">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <button id="close-modal" class="mt-4 w-full bg-gray-200 text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-300">Close</button>
+    </div>
+</div>
+
+
+    <footer class="bg-white border-t">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">About Us</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Company</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Careers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Press</a></li>
+                    </ul>
+                </div>
+                <div>                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Support</h3>
+                    <ul class="space-y-3">                        <li><a href="#" class="text-gray-600 hover:text-custom">Help Center</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom">Terms of Service</a></li>                        <li><a href="#" class="text-gray-600 hover:text-custom">Cookie Policy</a></li>
+                    </ul>                </div>
+                <div>
+                  
+                </div>
+            </div>            <div class="border-t mt-12 pt-8">
+                       </div>
+        </div>
+    </footer>
+   
+    <script>
+     
+      
+    
+</script>
+    
+    <script src="js/main1.js"></script>
+    </body>
+</html>        
